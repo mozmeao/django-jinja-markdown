@@ -1,0 +1,26 @@
+name: "CI" # Note that this name appears in the README's badge
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version:
+          - "3.9"
+          - "3.10"
+
+        django-tox-env:
+          - "django32"
+          - "django40"
+
+    name: Python ${{ matrix.python-version }} in use with ${{ matrix.django-tox-env }}
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+          architecture: "x64" # optional x64 (default) or x86.
+      - name: Install tox
+        run: pip install tox
+      - name: Run tox
+        run: tox -e py${{ matrix.python-version }}-${{ matrix.django-tox-env }}
