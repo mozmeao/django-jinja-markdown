@@ -80,3 +80,4 @@ History
 
 Forked in 2016 from the
 `jingo-markdown <https://github.com/nrsimha/jingo-markdown>`__ project.
+Please see CHANGELOG for more history.

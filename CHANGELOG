@@ -1,6 +1,18 @@
 CHANGES
 =======
 
+v1.1
+----
+
+* Support removal of deprecated behaviour and convenience imports in Jinja2 3.1+
+
+v1.0.1
+------
+
+* Improve trove classifiers
+* Switch to better way to get jinja environment
+* Improve README
+
 v1.0
 ----
 
