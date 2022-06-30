@@ -23,7 +23,7 @@ __summary__ = (
 )
 __uri__ = "https://github.com/pmac/django-jinja-markdown"
 
-__version__ = "1.0.1"
+__version__ = "1.1"
 
 __author__ = "Paul McLanahan"
 __email__ = "paul@mclanahan.net"
