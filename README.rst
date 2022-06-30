@@ -1,10 +1,11 @@
 Django-Jinja-Markdown
 =====================
 
-.. image:: https://img.shields.io/travis/pmac/django-jinja-markdown/master.svg?maxAge=2592000
-           :target: https://travis-ci.org/pmac/django-jinja-markdown/
+.. image:: https://github.com/mozmeao/django-jinja-markdown/actions/workflows/ci.yaml/badge.svg
+    :target: https://github.com/mozmeao/django-jinja-markdown/actions/workflows/ci.yaml
+
 .. image:: https://img.shields.io/pypi/v/django-jinja-markdown.svg?maxAge=2592000
-           :target: https://pypi.python.org/pypi/django-jinja-markdown
+    :target: https://pypi.python.org/pypi/django-jinja-markdown
 
 `Django-Jinja <http://niwinz.github.io/django-jinja/latest/>`__
 (`Jinja2 <http://jinja.pocoo.org/>`__) extension and filter to parse
@@ -13,7 +14,7 @@ markdown text in templates.
 Requirements
 ------------
 
--  `Django <https://www.djangoproject.com/>`__ 1.8 or 1.9
+-  `Django <https://www.djangoproject.com/>`__ 3.2+
 -  `Django-Jinja <http://niwinz.github.io/django-jinja/latest/>`__
 -  `Python-Markdown <https://pythonhosted.org/Markdown/>`__
 
