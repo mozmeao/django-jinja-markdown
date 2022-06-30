@@ -30,7 +30,12 @@ setup(
     packages=find_packages(exclude=['ez_setup', 'tests']),
     zip_safe=False,
     include_package_data=True,
-    install_requires=['Markdown'],
+    install_requires=[
+        "Markdown",
+        "django-jinja",
+        "markupsafe",
+        "jinja2",
+    ],
     classifiers=[
         'Environment :: Web Environment',
         'Intended Audience :: Developers',

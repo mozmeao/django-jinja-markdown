@@ -1,6 +1,6 @@
 from django_jinja import library
 from markdown import markdown as _markdown
-from jinja2 import Markup
+from markupsafe import Markup
 
 
 @library.filter
