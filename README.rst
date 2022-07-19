@@ -82,3 +82,14 @@ History
 Forked in 2016 from the
 `jingo-markdown <https://github.com/nrsimha/jingo-markdown>`__ project.
 Please see CHANGELOG for more history.
+
+
+Releasing
+---------
+
+1. Update the version number in ``django_jinja_markdown/__about__.py``.
+2. Add an entry to the change log in the README file.
+3. Tag the commit where you changed the above with the version number: e.g. ``1.21``.
+4. Push the commit and tag to the github repo.
+5. Create a new GitHub release, selecting the tag you just pushed to specify the commit. Hit Publish.
+6. Github will build and release the package to PyPI. Monitor the progress via the Actions tab.
