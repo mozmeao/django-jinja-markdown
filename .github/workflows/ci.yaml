@@ -14,18 +14,33 @@ jobs:
         python-version:
           - "3.9"
           - "3.10"
-
+          - "3.11"
+          - "3.12"
+          - "3.13"
         django-tox-env:
           - "django32"
-          - "django40"
-
-    name: Python ${{ matrix.python-version }} in use with ${{ matrix.django-tox-env }}
+          - "django42"
+          - "django51"
+          - "django52"
+        exclude: # We don't want every combination of the above, as some are not compatible
+          - python-version: "3.9"
+            django-tox-env: "django51"
+          - python-version: "3.9"
+            django-tox-env: "django52"
+          - python-version: "3.11"
+            django-tox-env: "django32"
+          - python-version: "3.12"
+            django-tox-env: "django32"
+          - python-version: "3.13"
+            django-tox-env: "django32"
+          - python-version: "3.13"
+            django-tox-env: "django42"
+    name: Python ${{ matrix.python-version }} with ${{ matrix.django-tox-env }}
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
-          architecture: "x64" # optional x64 (default) or x86.
       - name: Install tox
         run: pip install tox
       - name: Run tox
@@ -38,16 +53,16 @@ jobs:
       - test
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
-          python-version: 3.9
+          python-version: "3.11"
       - name: Install dependencies for package building only
         run: pip install build
       - name: Build package for upload to PyPI
         run: python -m build .
       - name: Upload the distribution to PyPI
-        uses: pypa/gh-action-pypi-publish@v1.5.0
+        uses: pypa/gh-action-pypi-publish@v1.8.7
         with:
           user: __token__
           password: ${{ secrets.PYPI_API_TOKEN }}
