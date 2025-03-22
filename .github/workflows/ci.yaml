@@ -46,11 +46,25 @@ jobs:
       - name: Run tox
         run: tox -e py${{ matrix.python-version }}-${{ matrix.django-tox-env }}
 
+  lint:
+    runs-on: ubuntu-latest
+    name: Flake8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install test requirements
+        run: pip install tox flake8
+      - name: Run flake8 linting
+        run: tox -e flake8
+
   release:
     name: django-jinja-markdown Release
     if: github.event_name == 'release' && github.event.action == 'published'
     needs:
       - test
+      - lint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
