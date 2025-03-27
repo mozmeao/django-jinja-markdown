@@ -4,19 +4,19 @@ Django-Jinja-Markdown
 .. image:: https://github.com/mozmeao/django-jinja-markdown/actions/workflows/ci.yaml/badge.svg
     :target: https://github.com/mozmeao/django-jinja-markdown/actions/workflows/ci.yaml
 
-.. image:: https://img.shields.io/pypi/v/django-jinja-markdown.svg?maxAge=2592000
-    :target: https://pypi.python.org/pypi/django-jinja-markdown
+.. image:: https://img.shields.io/pypi/v/django-jinja-markdown.svg
+    :target: https://pypi.org/project/django-jinja-markdown/
 
 `Django-Jinja <http://niwinz.github.io/django-jinja/latest/>`__
-(`Jinja2 <http://jinja.pocoo.org/>`__) extension and filter to parse
+(`Jinja2 <https://palletsprojects.com/projects/jinja>`__) extension and filter to parse
 markdown text in templates.
 
 Requirements
 ------------
 
 -  `Django <https://www.djangoproject.com/>`__ 3.2+
--  `Django-Jinja <http://niwinz.github.io/django-jinja/latest/>`__
--  `Python-Markdown <https://pythonhosted.org/Markdown/>`__
+-  `Django-Jinja <https://pypi.org/project/django-jinja/>`__
+-  `Python-Markdown <https://pypi.org/project/Markdown/>`__
 
 Installation
 ------------
