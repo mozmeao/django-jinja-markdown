@@ -12,12 +12,15 @@ jobs:
     strategy:
       matrix:
         python-version:
-          - "3.9"
           - "3.10"
+          - "3.11"
+          - "3.12"
+          - "3.13"
 
         django-tox-env:
-          - "django32"
-          - "django40"
+          - "django42"
+          - "django51"
+          - "django52"
 
     name: Python ${{ matrix.python-version }} in use with ${{ matrix.django-tox-env }}
     steps:

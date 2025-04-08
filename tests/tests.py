@@ -2,7 +2,6 @@ from django.test import TestCase
 
 from django_jinja.backend import Jinja2
 
-
 engine = Jinja2.get_default()
 
 
@@ -21,8 +20,6 @@ class TestDjangoJinjaMarkdown(TestCase):
 
     def test_markdown_tag(self):
         self.assertEqual(
-            engine.from_string(
-                "{% markdown %}*fancy donnie*{% endmarkdown %}"
-            ).render(),
+            engine.from_string("{% markdown %}*fancy donnie*{% endmarkdown %}").render(),
             "<p><em>fancy donnie</em></p>",
         )

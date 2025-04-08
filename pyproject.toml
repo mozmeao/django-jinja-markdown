@@ -1,0 +1,75 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [ "setuptools>=75.8.1" ]
+
+[project]
+name = "django-jinja-markdown"
+version = "1.2"
+description = "Django-Jinja (Jinja2) extension and filter for parsing markdown text markup."
+readme = "README.rst"
+license = { text = "MIT" }
+authors = [
+  { name = "Paul McLanahan", email = "paul@mclanahan.net" },
+]
+requires-python = ">=3.10"
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Environment :: Web Environment",
+  "Framework :: Django",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Software Development :: Code Generators",
+  "Topic :: Text Processing :: Markup",
+]
+
+dependencies = [
+  "django-jinja>=2.11",
+  "jinja2>=3.1.6",
+  "markdown>=3.5",
+  "markupsafe>=3",
+]
+urls.Changelog = "https://github.com/mozmeao/django-jinja-markdown/blob/master/CHANGELOG"
+urls.Homepage = "https://github.com/mozmeao/django-jinja-markdown"
+urls.Issues = "https://github.com/mozmeao/django-jinja-markdown/issues"
+
+[project.optional-dependencies]
+dev = [
+    "ruff",
+]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 120
+indent-width = 4
+
+# Set what ruff should check for.
+# See https://docs.astral.sh//ruff/rules/ for a list of rules.
+lint.select = [
+  "A",   # flake8-builtin errors
+  "B",   # bugbear errors
+  "C4",  # flake8-comprehensions errors
+  "DJ",  # flake8-django errors
+  "E",   # pycodestyle errors
+  "F",   # pyflakes errors
+  "I",   # import sorting
+  "Q",   # flake8-quotes errors
+  "T20", # flake8-print errors
+  "UP",  # py-upgrade
+  "W",   # pycodestyle warnings
+]
+lint.isort.section-order = [
+  "future",
+  "standard-library",
+  "django",
+  "third-party",
+  "first-party",
+  "local-folder",
+]
+lint.isort.sections.django = [ "django" ]
