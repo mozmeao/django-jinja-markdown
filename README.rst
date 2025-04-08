@@ -89,6 +89,6 @@ Releasing
 1. Update the version number in ``pyproject.toml``.
 2. Add an entry to the CHANGELOG file.
 3. Tag the commit with the version number: e.g. ``1.21``.
-4. Push the commit and tag to the github repo.
+4. Push the commit and tag to the GitHub repo.
 5. Create a new GitHub release, selecting the tag you just pushed to specify the commit. Hit Publish.
-6. Github will build and release the package to PyPI. Monitor the progress via the Actions tab.
+6. GitHub will build and release the package to PyPI. Monitor the progress via the Actions tab.
