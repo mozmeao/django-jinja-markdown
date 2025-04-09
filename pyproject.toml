@@ -7,7 +7,7 @@ name = "django-jinja-markdown"
 version = "1.2"
 description = "Django-Jinja (Jinja2) extension and filter for parsing markdown text markup."
 readme = "README.rst"
-license = { text = "MIT" }
+license = "MIT"
 authors = [
   { name = "Paul McLanahan", email = "paul@mclanahan.net" },
 ]
@@ -17,7 +17,6 @@ classifiers = [
   "Environment :: Web Environment",
   "Framework :: Django",
   "Intended Audience :: Developers",
-  "License :: OSI Approved :: MIT License",
   "Operating System :: OS Independent",
   "Programming Language :: Python",
   "Programming Language :: Python :: 3 :: Only",
