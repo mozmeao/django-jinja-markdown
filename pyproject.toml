@@ -36,14 +36,12 @@ dependencies = [
   "markdown>=3.5",
   "markupsafe>=3",
 ]
+optional-dependencies.dev = [
+  "ruff",
+]
 urls.Changelog = "https://github.com/mozmeao/django-jinja-markdown/blob/master/CHANGELOG"
 urls.Homepage = "https://github.com/mozmeao/django-jinja-markdown"
 urls.Issues = "https://github.com/mozmeao/django-jinja-markdown/issues"
-
-[project.optional-dependencies]
-dev = [
-    "ruff",
-]
 
 [tool.ruff]
 line-length = 120
