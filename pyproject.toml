@@ -43,6 +43,18 @@ urls.Changelog = "https://github.com/mozmeao/django-jinja-markdown/blob/master/C
 urls.Homepage = "https://github.com/mozmeao/django-jinja-markdown"
 urls.Issues = "https://github.com/mozmeao/django-jinja-markdown/issues"
 
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = [ "." ]
+include = [ "django_jinja_markdown*" ]
+
+[tool.setuptools.data-files]
+# Defines which files to include in the sdist.
+# The "" means the root.
+"" = [ "README.rst", "LICENSE", "CHANGELOG", "tox.ini" ]
+
 [tool.ruff]
 line-length = 120
 indent-width = 4
