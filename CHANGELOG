@@ -1,6 +1,12 @@
 CHANGES
 =======
 
+v1.2 (unreleased)
+-----------------
+
+* Update supported versions of Python and Django
+* Switch to pyproject.toml for packaging
+
 v1.1
 ----
 
