@@ -1,7 +1,0 @@
-include README.rst
-include LICENSE
-include CHANGELOG
-include MANIFEST.in
-include tox.ini
-recursive-include tests *.py
-recursive-include django_jinja_markdown *.py

@@ -1,17 +1,15 @@
 import jinja2
-from jinja2.ext import Extension
 import markdown
+from jinja2.ext import Extension
 
 
 class MarkdownExtension(Extension):
     tags = {"markdown"}
 
     def __init__(self, environment):
-        super(MarkdownExtension, self).__init__(environment)
+        super().__init__(environment)
         environment.extend(
-            markdowner=markdown.Markdown(
-                extensions=["tables", "codehilite", "fenced_code", "toc", "nl2br"]
-            )
+            markdowner=markdown.Markdown(extensions=["tables", "codehilite", "fenced_code", "toc", "nl2br"])
         )
 
     def parse(self, parser):
@@ -24,9 +22,7 @@ class MarkdownExtension(Extension):
 
         lineno = next(parser.stream).lineno
         body = parser.parse_statements(["name:endmarkdown"], drop_needle=True)
-        return jinja2.nodes.CallBlock(
-            self.call_method("_markdown_support"), [], [], body
-        ).set_lineno(lineno)
+        return jinja2.nodes.CallBlock(self.call_method("_markdown_support"), [], [], body).set_lineno(lineno)
 
     def _markdown_support(self, caller):
         """

@@ -4,19 +4,18 @@ Django-Jinja-Markdown
 .. image:: https://github.com/mozmeao/django-jinja-markdown/actions/workflows/ci.yaml/badge.svg
     :target: https://github.com/mozmeao/django-jinja-markdown/actions/workflows/ci.yaml
 
-.. image:: https://img.shields.io/pypi/v/django-jinja-markdown.svg?maxAge=2592000
-    :target: https://pypi.python.org/pypi/django-jinja-markdown
+.. image:: https://img.shields.io/pypi/v/django-jinja-markdown.svg
+    :target: https://pypi.org/project/django-jinja-markdown/
 
 `Django-Jinja <http://niwinz.github.io/django-jinja/latest/>`__
-(`Jinja2 <http://jinja.pocoo.org/>`__) extension and filter to parse
-markdown text in templates.
+(`Jinja2 <https://palletsprojects.com/projects/jinja>`__) extension and filter to parse markdown text in templates.
 
 Requirements
 ------------
 
--  `Django <https://www.djangoproject.com/>`__ 3.2+
--  `Django-Jinja <http://niwinz.github.io/django-jinja/latest/>`__
--  `Python-Markdown <https://pythonhosted.org/Markdown/>`__
+-  `Django <https://www.djangoproject.com/>`__
+-  `Django-Jinja <https://pypi.org/project/django-jinja/>`__
+-  `Python-Markdown <https://pypi.org/project/Markdown/>`__
 
 Installation
 ------------
@@ -87,9 +86,9 @@ Please see CHANGELOG for more history.
 Releasing
 ---------
 
-1. Update the version number in ``django_jinja_markdown/__about__.py``.
-2. Add an entry to the change log in the README file.
-3. Tag the commit where you changed the above with the version number: e.g. ``1.21``.
-4. Push the commit and tag to the github repo.
+1. Update the version number in ``pyproject.toml``.
+2. Add an entry to the CHANGELOG file.
+3. Tag the commit with the version number: e.g. ``1.21``.
+4. Push the commit and tag to the GitHub repo.
 5. Create a new GitHub release, selecting the tag you just pushed to specify the commit. Hit Publish.
-6. Github will build and release the package to PyPI. Monitor the progress via the Actions tab.
+6. GitHub will build and release the package to PyPI. Monitor the progress via the Actions tab.
